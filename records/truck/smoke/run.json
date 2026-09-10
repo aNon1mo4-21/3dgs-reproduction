@@ -1,0 +1,52 @@
+{
+  "stage": "smoke",
+  "iterations": 1000,
+  "commands": [
+    [
+      "/root/autodl-tmp/venvs/3dgs/bin/python",
+      "/root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/train.py",
+      "-s",
+      "/root/autodl-tmp/datasets/tandt/truck",
+      "-m",
+      "/root/autodl-tmp/outputs/truck_smoke",
+      "--eval",
+      "-r",
+      "2",
+      "--iterations",
+      "1000",
+      "--test_iterations",
+      "1000",
+      "--save_iterations",
+      "1000",
+      "--checkpoint_iterations",
+      "1000",
+      "--disable_viewer"
+    ],
+    [
+      "/root/autodl-tmp/venvs/3dgs/bin/python",
+      "/root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/render.py",
+      "-m",
+      "/root/autodl-tmp/outputs/truck_smoke",
+      "--iteration",
+      "1000",
+      "--skip_train"
+    ]
+  ],
+  "start_utc": "2026-09-10T03:23:01Z",
+  "upstream": "54c035f7834b564019656c3e3fcc3646292f727d",
+  "status": "complete",
+  "steps": [
+    {
+      "name": "train",
+      "returncode": 0,
+      "wall_seconds": 32.127133968286216
+    },
+    {
+      "name": "render",
+      "returncode": 0,
+      "wall_seconds": 19.616930769756436
+    }
+  ],
+  "rendered_views": 32,
+  "end_utc": "2026-09-10T03:23:53Z"
+}

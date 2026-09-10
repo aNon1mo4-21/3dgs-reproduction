@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/root/autodl-tmp/3dgs-reproduction/scripts/evaluate_truck.py", line 30, in <module>
+    rows.append(dict(file=file.name,psnr=psnr(a,b).item(),ssim=ssim(a,b).item(),
+RuntimeError: a Tensor with 3 elements cannot be converted to Scalar

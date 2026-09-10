@@ -1,0 +1,8 @@
+{
+  "archive": "truck-7000-artifacts.tar.gz",
+  "bytes": 870669378,
+  "sha256": "8b1b5119f543c6d72b36275852059020083b734f0480ca334f2e1035a63656b3",
+  "local_copy_verified": true,
+  "location": "Local archive stored beside the repository; remote copy in /root/autodl-tmp",
+  "contents": "Complete truck_7000 output directory; source dataset excluded"
+}

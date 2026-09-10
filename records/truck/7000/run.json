@@ -1,0 +1,52 @@
+{
+  "stage": "7000",
+  "iterations": 7000,
+  "commands": [
+    [
+      "/root/autodl-tmp/venvs/3dgs/bin/python",
+      "/root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/train.py",
+      "-s",
+      "/root/autodl-tmp/datasets/tandt/truck",
+      "-m",
+      "/root/autodl-tmp/outputs/truck_7000",
+      "--eval",
+      "-r",
+      "2",
+      "--iterations",
+      "7000",
+      "--test_iterations",
+      "7000",
+      "--save_iterations",
+      "7000",
+      "--checkpoint_iterations",
+      "7000",
+      "--disable_viewer"
+    ],
+    [
+      "/root/autodl-tmp/venvs/3dgs/bin/python",
+      "/root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/render.py",
+      "-m",
+      "/root/autodl-tmp/outputs/truck_7000",
+      "--iteration",
+      "7000",
+      "--skip_train"
+    ]
+  ],
+  "start_utc": "2026-09-10T03:26:05Z",
+  "upstream": "54c035f7834b564019656c3e3fcc3646292f727d",
+  "status": "complete",
+  "steps": [
+    {
+      "name": "train",
+      "returncode": 0,
+      "wall_seconds": 114.04458162467927
+    },
+    {
+      "name": "render",
+      "returncode": 0,
+      "wall_seconds": 17.363986453041434
+    }
+  ],
+  "rendered_views": 32,
+  "end_utc": "2026-09-10T03:28:16Z"
+}

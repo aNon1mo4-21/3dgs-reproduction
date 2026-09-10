@@ -221,3 +221,12 @@ __marimo__/
 !/records/build/
 !/records/build/*.txt
 !/records/build/*.log
+
+# Dataset/model binaries live outside this repository.
+/data/
+/datasets/
+/outputs/
+*.pt
+*.pth
+!/records/truck/**/*.log
+!/records/truck/*.log

@@ -1,0 +1,6 @@
+{
+  "views": 32,
+  "psnr_mean": 25.145931899547577,
+  "ssim_mean": 0.9062859062105417,
+  "protocol": "Mean of per-view metrics on saved RGB PNGs; official PSNR and SSIM functions; LPIPS not computed."
+}

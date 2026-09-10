@@ -1,0 +1,20 @@
+{
+  "source_url": "https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/datasets/input/tandt_db.zip",
+  "archive_sha256": "816e62f22a161abbfe841d2a6b10cdf036e297c9fa289b3bfeee9c6ec526d7e1",
+  "archive_bytes": 682628995,
+  "scene_path": "/root/autodl-tmp/datasets/tandt/truck",
+  "extracted_files": 255,
+  "total_images": 251,
+  "train_images": 219,
+  "test_images": 32,
+  "initial_points": 136029,
+  "first_image_size": [
+    979,
+    546
+  ],
+  "camera_models": [
+    "PINHOLE"
+  ],
+  "split_rule": "Sorted image names, zero-based indices divisible by 8 held out; official --eval; train_test_exp=False.",
+  "limitation": "COLMAP poses and sparse initialization are provided by the authors; SfM was not recomputed using training images alone."
+}
