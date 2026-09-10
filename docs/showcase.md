@@ -2,7 +2,7 @@
 
 我将第一阶段 Truck 实验做成一个独立的静态展示页，让访客先看到实际结果，再按需检查命令和指标。
 
-在线地址：https://truck-3dgs-reproduction.bl894115.chatgpt.site
+在线地址：https://anon1mo4-21.github.io/3dgs-reproduction/
 
 ## 可以验收什么
 
@@ -37,6 +37,6 @@ python -m http.server 8080 --directory showcase
 - `showcase/assets/gt/`、`showcase/assets/renders/`：32 对原始 PNG。
 - `showcase/metrics.json`、`showcase/dataset.json`：供访客下载的原始实验记录。
 
-在线站点通过 Sites 托管，公开访问；本仓库保留相同的静态页面，便于审阅、下载和迁移。展示页不包含 SSH 凭据或模型归档。
+在线站点通过本仓库的 GitHub Pages 托管，公开访问。main 分支的 showcase/ 或发布工作流更新后，GitHub Actions 会自动发布 showcase/ 目录；也可在 Actions 中手动触发。工作流见 `.github/workflows/pages.yml`。展示页不包含 SSH 凭据或模型归档。
 
 本次完成 JavaScript 语法、静态资源引用和原始渲染图像摘要校验；未进行浏览器自动化交互测试。
