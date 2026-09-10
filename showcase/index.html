@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="检查 Truck 场景的真实 3DGS 训练成果：32 个留出视角、参考照片对比、逐视角指标和完整实验记录。">
+  <meta name="theme-color" content="#10181d">
+  <title>Truck · 3DGS 实验展台</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="data.js" defer></script><script src="app.js" defer></script>
+</head>
+<body>
+<header class="topbar"><a class="brand" href="#"><span class="brand-icon" aria-hidden="true">◈</span> 3DGS <span class="brand-sub">实验展台</span></a><nav aria-label="主导航"><a href="#evidence">验收记录</a><a href="https://github.com/aNon1mo4-21/3dgs-reproduction" target="_blank" rel="noopener">GitHub ↗</a></nav></header>
+<main>
+  <section class="workspace" aria-labelledby="title">
+    <div class="heading"><div><div class="eyebrow">EXPERIMENT 001 / TANKS AND TEMPLES</div><h1 id="title">从照片，重建一辆卡车。</h1><p>用 219 张照片训练，在另外 32 个相机位置生成图像。拖动分界线，检查模型实际生成了什么。</p></div><div class="status"><span>已完成训练与独立渲染</span><small>7,000 步 · 官方 3DGS · RTX 4090D</small></div></div>
+    <div class="work-grid">
+      <div class="visual-panel">
+        <div class="toolbar"><div class="segmented" role="group" aria-label="显示方式"><button data-mode="compare" aria-pressed="true">拖动对比</button><button data-mode="render" aria-pressed="false">仅渲染</button><button data-mode="reference" aria-pressed="false">仅参考</button></div><span class="resolution">输出 490 × 273</span></div>
+        <div id="viewer" class="viewer" data-mode="compare" aria-label="参考照片与模型渲染对比">
+          <img id="reference" src="assets/gt/00000.png" alt="留出视角的真实参考照片" width="490" height="273">
+          <img id="rendered" src="assets/renders/00000.png" alt="7,000 步高斯模型生成的同视角图像" width="490" height="273">
+          <span class="image-label reference-label">参考照片</span><span class="image-label render-label">模型渲染 · 7,000 步</span>
+          <div class="divider" aria-hidden="true"><span>‹ ›</span></div>
+          <input id="wipe" type="range" min="0" max="100" value="50" aria-label="对比分界位置" aria-valuetext="左侧参考照片 50%，右侧模型渲染 50%">
+          <div id="image-error" class="image-error" hidden>图片暂时未能加载。<button id="retry">重新加载</button></div>
+        </div>
+        <div class="viewer-footer"><div class="view-navigation"><button id="previous" aria-label="上一个留出视角">←</button><strong id="view-count">01 <span>/ 32</span></strong><button id="next" aria-label="下一个留出视角">→</button></div><p id="view-caption" aria-live="polite">留出视角 01</p><a id="download" href="assets/renders/00000.png" download="truck-render-00000.png">下载渲染图 ↓</a></div>
+      </div>
+      <aside class="inspector" aria-label="当前视角的验收信息"><div class="eyebrow">THIS VIEW / 本视角</div><h2 id="view-name">视角 01</h2><p class="source-label">对应原始照片</p><code id="source-name">加载中</code><div class="view-metrics"><div><span>PSNR <small>越高越好</small></span><strong id="psnr">—<small>dB</small></strong></div><div><span>SSIM <small>越接近 1 越好</small></span><strong id="ssim">—</strong></div></div><div class="evidence-note"><span class="check">✓</span><p>这张参考照片<strong>未参与高斯优化</strong>。右侧图片由保存后的模型重新加载、独立渲染得到。</p></div><a class="text-link" href="metrics.json" download>下载全部逐视角指标 ↗</a><p class="small-note">当前展示预渲染结果，可切换 32 个已验证视角；不是实时三维漫游。</p></aside>
+    </div>
+    <div class="filmstrip-heading"><h2>32 个留出视角</h2><span>按原始划分顺序展示，未按效果挑选</span></div><div id="filmstrip" class="filmstrip" role="group" aria-label="选择留出视角"></div>
+  </section>
+  <section class="results-section" id="evidence" aria-labelledby="results-title">
+    <div class="section-heading"><div><div class="eyebrow">RESULTS & EVIDENCE</div><h2 id="results-title">结果可以看，也可以追溯。</h2></div><a class="outline-link" href="https://github.com/aNon1mo4-21/3dgs-reproduction/blob/main/docs/day1-truck.md" target="_blank" rel="noopener">阅读完整实验记录 ↗</a></div>
+    <div class="results-grid"><article class="training-card"><div class="card-heading"><h3>多训练 6,000 步，发生了什么？</h3><span>32 个视角的平均值</span></div><div class="metric-comparison"><div><span>PSNR / 像素重建质量</span><div class="bar-row"><label>1,000 步</label><div class="bar-track"><i style="width:73.61%"></i></div><b>22.08</b></div><div class="bar-row final"><label>7,000 步</label><div class="bar-track"><i style="width:83.82%"></i></div><b>25.15 <small>dB</small></b></div></div><div><span>SSIM / 局部结构相似性</span><div class="bar-row"><label>1,000 步</label><div class="bar-track"><i style="width:81.21%"></i></div><b>0.8121</b></div><div class="bar-row final"><label>7,000 步</label><div class="bar-track"><i style="width:90.63%"></i></div><b>0.9063</b></div></div></div><p>两次运行分别从同一稀疏点云初始化。指标在保存的 RGB 图片上计算；PSNR 图示范围 0–30 dB，SSIM 范围 0–1。未计算 LPIPS。</p></article>
+    <article class="model-card"><div class="eyebrow">THE TRAINED SCENE</div><strong>1,032,308</strong><h3>个可优化的三维高斯</h3><p>从 136,029 个初始点出发，训练调整位置、形状、透明度和外观，并增加需要的高斯。</p><dl><div><dt>训练进程</dt><dd>114.04 秒</dd></div><div><dt>32 个视角渲染进程</dt><dd>17.36 秒</dd></div><div><dt>实际图像分辨率</dt><dd>490 × 273</dd></div></dl><small>进程耗时包含加载与保存，不是实时渲染速度。</small></article></div>
+    <div class="acceptance"><h3>本次验收的四项证据</h3><div class="evidence-grid"><a href="https://github.com/aNon1mo4-21/3dgs-reproduction/blob/main/records/upstream-versions.txt" target="_blank" rel="noopener"><span>01</span><strong>固定的官方代码</strong><p>主仓库与依赖均有精确提交版本。</p><em>查看版本记录 ↗</em></a><a href="https://github.com/aNon1mo4-21/3dgs-reproduction/blob/main/records/truck/7000/run.json" target="_blank" rel="noopener"><span>02</span><strong>真实执行的训练</strong><p>训练与渲染命令、退出码和耗时完整留存。</p><em>查看运行记录 ↗</em></a><a href="dataset.json" download><span>03</span><strong>明确的留出视角</strong><p>219 张训练照片、32 张留出照片，划分可检查。</p><em>下载图像划分 ↓</em></a><a href="https://github.com/aNon1mo4-21/3dgs-reproduction/blob/main/records/truck/7000/backup.json" target="_blank" rel="noopener"><span>04</span><strong>可恢复的模型</strong><p>PLY、检查点及渲染图已本地备份，校验一致。</p><em>查看备份校验 ↗</em></a></div></div>
+    <details class="scope"><summary>这次做到了什么，还有哪些边界？<span aria-hidden="true">＋</span></summary><div><p><strong>已经做到：</strong>从公开多视图照片和已有 COLMAP 相机、点云出发，训练出这个场景的高斯模型，再生成未参与高斯优化的视角图像。</p><p><strong>尚未做到：</strong>任意单张照片生成其他视角、自己的照片自动重建、实时交互式三维浏览。</p><p>本次使用作者提供的相机与点云，未仅用训练照片重算 SfM。采用半分辨率、7,000 步和更新后的官方源码，不等同于原论文默认 30,000 步的定量复现。图像仍可见地面模糊和细结构伪影。</p></div></details>
+  </section>
+</main>
+<footer><span>aNon1mo4-21 / 3dgs-reproduction</span><span>数据：Tanks and Temples · 作者提供的 Truck 场景</span><a href="https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/" target="_blank" rel="noopener">原论文与官方实现 ↗</a></footer>
+<noscript><p>请启用 JavaScript 以切换视角和查看指标。默认视角的参考照片仍可直接查看。</p></noscript>
+</body></html>

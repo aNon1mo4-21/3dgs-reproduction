@@ -1,5 +1,13 @@
 # 3D Gaussian Splatting Reproduction
 
+## 先看成果
+
+**[打开交互式成果展示页 →](https://truck-3dgs-reproduction.foamy-stoat-2407.chatgpt.site)**
+
+无需登录或启动 GPU。可以切换全部 32 个留出视角，拖动分界线对比真实照片与模型渲染，查看每张图的 PSNR/SSIM，并下载渲染图片与指标。
+
+这是本次实验实际输出的展示页，不是实时三维漫游或上传图片重建服务。网站完整静态源文件保存在 [`showcase/`](showcase/)，本地使用方法见 [展示页说明](docs/showcase.md)。
+
 我在这个仓库中记录官方 3D Gaussian Splatting（3DGS）流程的复现过程，包括环境配置、源码版本、实验命令和结果验证。第一阶段的目标是用一个小型公开多视图场景完成训练，并生成可核验的新视角图像。
 
 ## 当前状态

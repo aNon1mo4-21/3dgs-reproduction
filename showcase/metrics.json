@@ -1,0 +1,200 @@
+{
+  "views": 32,
+  "psnr_mean": 25.145931899547577,
+  "ssim_mean": 0.9062859062105417,
+  "protocol": "Mean of per-view metrics on saved RGB PNGs; official PSNR and SSIM functions; LPIPS not computed.",
+  "per_view": [
+    {
+      "file": "00000.png",
+      "psnr": 26.37383460998535,
+      "ssim": 0.9283920526504517,
+      "render_sha256": "d351889661acd80ee5dbb68c7a266ea90e11c22a966513b6066ba2a89c73ea1b"
+    },
+    {
+      "file": "00001.png",
+      "psnr": 26.463993072509766,
+      "ssim": 0.9265788197517395,
+      "render_sha256": "059d348f5773543d8b66a88e22e6b5289f59eca7f7cde6c26b5a1dafe0bca4e3"
+    },
+    {
+      "file": "00002.png",
+      "psnr": 25.3690185546875,
+      "ssim": 0.9092532396316528,
+      "render_sha256": "f74b24f65419118d1862bbd3c48d9f179998171dcd264e949d925bae7e82baed"
+    },
+    {
+      "file": "00003.png",
+      "psnr": 25.83020782470703,
+      "ssim": 0.9185473918914795,
+      "render_sha256": "19bf5426767ec82a87f3e29eac966279d00a0e1b22932acc527fea2272997544"
+    },
+    {
+      "file": "00004.png",
+      "psnr": 25.656837463378906,
+      "ssim": 0.9076421856880188,
+      "render_sha256": "b104de526410543b45fb40663d4c2f4aa1c6c2a4663a781b3694deba442b7009"
+    },
+    {
+      "file": "00005.png",
+      "psnr": 26.321002960205078,
+      "ssim": 0.9188477396965027,
+      "render_sha256": "e464cff4144c4940094c9022510fceb18819dfe35ec068c8c06ee0687cf0ef41"
+    },
+    {
+      "file": "00006.png",
+      "psnr": 24.322641372680664,
+      "ssim": 0.921089231967926,
+      "render_sha256": "5c25f55bb30ba3dcfaeb31640a1b6a28aed98f2513a119357dd97c7039842eeb"
+    },
+    {
+      "file": "00007.png",
+      "psnr": 24.512935638427734,
+      "ssim": 0.8822095990180969,
+      "render_sha256": "f906899a1fe745ab3d1fdb856e4c45e0a8252926b5855da45f1c2034e02516bf"
+    },
+    {
+      "file": "00008.png",
+      "psnr": 23.935911178588867,
+      "ssim": 0.8985497355461121,
+      "render_sha256": "6252c77dbcdb4a5acb94550e973c299bd8020ed7bef487a08484fe71e7af0ea2"
+    },
+    {
+      "file": "00009.png",
+      "psnr": 25.795717239379883,
+      "ssim": 0.9296873807907104,
+      "render_sha256": "e40b2d3d0b774b5b0be4b74c2fb69857d2a767c886a04a01cdde30e380b6683d"
+    },
+    {
+      "file": "00010.png",
+      "psnr": 26.570938110351562,
+      "ssim": 0.901932954788208,
+      "render_sha256": "74ee328097c14eb417d8f75955faf037f7fbb2f1094e05d1adfddd9c687b0ffb"
+    },
+    {
+      "file": "00011.png",
+      "psnr": 25.45763397216797,
+      "ssim": 0.9177001118659973,
+      "render_sha256": "7e4fd468f376436c5406f8cca1a83c36165bfca498ee1f647608bedecbe05f2e"
+    },
+    {
+      "file": "00012.png",
+      "psnr": 24.90146255493164,
+      "ssim": 0.9127920866012573,
+      "render_sha256": "f6eec769f13d0e78ff9ce71c1b4ca2bb78de1b9b349f9e32ba4004f13a4eabf1"
+    },
+    {
+      "file": "00013.png",
+      "psnr": 26.309829711914062,
+      "ssim": 0.9265831112861633,
+      "render_sha256": "fa3c09221e2098ffa63cf19b05e0a1b3bc3d7efc50fe3ac5035b12a9a0fcf5e0"
+    },
+    {
+      "file": "00014.png",
+      "psnr": 24.45339584350586,
+      "ssim": 0.8913672566413879,
+      "render_sha256": "1776fb16102fb7901f1de9acace4b4f5bd20185a8316b8ed4d7ea2ad0cc5ab06"
+    },
+    {
+      "file": "00015.png",
+      "psnr": 23.654630661010742,
+      "ssim": 0.8763322234153748,
+      "render_sha256": "13fb9502081b3dc530d3af35638759870cb4e420354dd3aed489b6cd7422a8b4"
+    },
+    {
+      "file": "00016.png",
+      "psnr": 24.843704223632812,
+      "ssim": 0.8824182748794556,
+      "render_sha256": "6a72af3b3e3d29b2214689aae38bbc02a067f4493605034ec5ca8b2ebcd846ba"
+    },
+    {
+      "file": "00017.png",
+      "psnr": 24.94228172302246,
+      "ssim": 0.9155034422874451,
+      "render_sha256": "a1768fac4cb5fbcd98d73fba4e896fbd3e09c6f524fa7bbd30fd7ed4e58190c8"
+    },
+    {
+      "file": "00018.png",
+      "psnr": 26.15492057800293,
+      "ssim": 0.912536084651947,
+      "render_sha256": "17632b1e9289b5e36d93b22c5b4df7e66c4efbef3d89ee23d981443cd934d791"
+    },
+    {
+      "file": "00019.png",
+      "psnr": 23.193817138671875,
+      "ssim": 0.8775300979614258,
+      "render_sha256": "2f3e13b1bdaec276e5d8f6b3a9fa9501802be81a7bbfd837898ad40c1104afe7"
+    },
+    {
+      "file": "00020.png",
+      "psnr": 26.725265502929688,
+      "ssim": 0.9185811281204224,
+      "render_sha256": "966fe9a569321e6b2ce96020f8641ea8ea52d569f1e6c35032b41f3cff60b3a2"
+    },
+    {
+      "file": "00021.png",
+      "psnr": 24.941692352294922,
+      "ssim": 0.9050639271736145,
+      "render_sha256": "4939dadc9f1942433419accf6d67f01bfb20a830c326b145563fa340eba75f88"
+    },
+    {
+      "file": "00022.png",
+      "psnr": 27.181560516357422,
+      "ssim": 0.9183679223060608,
+      "render_sha256": "0cd4daa75e9057bbef6449efdd4a33c245dcfb6358b84de2cedc22ecdd22874e"
+    },
+    {
+      "file": "00023.png",
+      "psnr": 26.306758880615234,
+      "ssim": 0.90467369556427,
+      "render_sha256": "6621c2ee998735b8c63b95db4ca5027ac6282f772f10445f7acf221f97956c69"
+    },
+    {
+      "file": "00024.png",
+      "psnr": 26.360721588134766,
+      "ssim": 0.9093755483627319,
+      "render_sha256": "5c252b6bea08b526d02076a6938e15c36cc03c7d05caf20718778c6beed89d0b"
+    },
+    {
+      "file": "00025.png",
+      "psnr": 25.504653930664062,
+      "ssim": 0.9241189956665039,
+      "render_sha256": "421eff89a329d0e1d3f8f1e1470f3632d453d1a66caf74d031388a1ea042cc83"
+    },
+    {
+      "file": "00026.png",
+      "psnr": 24.840028762817383,
+      "ssim": 0.9173054695129395,
+      "render_sha256": "1554a6f3fc172b802c93f7ae16d6ac21e703daa36de800f2876d7e3a58291423"
+    },
+    {
+      "file": "00027.png",
+      "psnr": 21.620708465576172,
+      "ssim": 0.8483234643936157,
+      "render_sha256": "a44a96b4394c075981e65e0227e222b8d1c34f721309120ef97eec4edac52f9d"
+    },
+    {
+      "file": "00028.png",
+      "psnr": 23.94495964050293,
+      "ssim": 0.8923290371894836,
+      "render_sha256": "ea9b05416d3c0e5bfb1c40b81acdcca54e003e214b8cb52862e5d8ce7854ba61"
+    },
+    {
+      "file": "00029.png",
+      "psnr": 23.21251678466797,
+      "ssim": 0.8880801200866699,
+      "render_sha256": "1e825ce59a2ad9ba37b8142ca623b1cf285383e1199b29945871f2e84bc9b62d"
+    },
+    {
+      "file": "00030.png",
+      "psnr": 24.671955108642578,
+      "ssim": 0.913418710231781,
+      "render_sha256": "d2535c7aaf350d43348489aa6c50a6f10e74102668fddc28d512bb879ffa9e66"
+    },
+    {
+      "file": "00031.png",
+      "psnr": 24.29428482055664,
+      "ssim": 0.9060179591178894,
+      "render_sha256": "4abde4b244eb9b4eab677fee13aa2e318f8f0cd7f07b47f353a4d3f6f76f4dfd"
+    }
+  ]
+}
