@@ -2,7 +2,7 @@
 
 我将第一阶段 Truck 实验做成一个独立的静态展示页，让访客先看到实际结果，再按需检查命令和指标。
 
-在线地址：https://truck-3dgs-reproduction.foamy-stoat-2407.chatgpt.site
+在线地址：https://truck-3dgs-reproduction.bl894115.chatgpt.site
 
 ## 可以验收什么
 

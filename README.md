@@ -2,7 +2,7 @@
 
 ## 先看成果
 
-**[打开交互式成果展示页 →](https://truck-3dgs-reproduction.foamy-stoat-2407.chatgpt.site)**
+**[打开交互式成果展示页 →](https://truck-3dgs-reproduction.bl894115.chatgpt.site)**
 
 无需登录或启动 GPU。可以切换全部 32 个留出视角，拖动分界线对比真实照片与模型渲染，查看每张图的 PSNR/SSIM，并下载渲染图片与指标。
 
