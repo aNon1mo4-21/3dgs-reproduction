@@ -1,0 +1,34 @@
+usage: render.py [-h] [--sh_degree SH_DEGREE] [--source_path SOURCE_PATH]
+                 [--model_path MODEL_PATH] [--images IMAGES] [--depths DEPTHS]
+                 [--resolution RESOLUTION] [--white_background]
+                 [--train_test_exp] [--data_device DATA_DEVICE] [--eval]
+                 [--convert_SHs_python] [--compute_cov3D_python] [--debug]
+                 [--antialiasing] [--iteration ITERATION] [--skip_train]
+                 [--skip_test] [--quiet]
+
+Testing script parameters
+
+options:
+  -h, --help            show this help message and exit
+  --iteration ITERATION
+  --skip_train
+  --skip_test
+  --quiet
+
+Loading Parameters:
+  --sh_degree SH_DEGREE
+  --source_path SOURCE_PATH, -s SOURCE_PATH
+  --model_path MODEL_PATH, -m MODEL_PATH
+  --images IMAGES, -i IMAGES
+  --depths DEPTHS, -d DEPTHS
+  --resolution RESOLUTION, -r RESOLUTION
+  --white_background, -w
+  --train_test_exp
+  --data_device DATA_DEVICE
+  --eval
+
+Pipeline Parameters:
+  --convert_SHs_python
+  --compute_cov3D_python
+  --debug
+  --antialiasing

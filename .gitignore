@@ -216,3 +216,8 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Preserve compact experiment evidence despite generic build/log exclusions.
+!/records/build/
+!/records/build/*.txt
+!/records/build/*.log

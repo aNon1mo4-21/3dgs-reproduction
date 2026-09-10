@@ -4,13 +4,13 @@
 
 ## 当前状态
 
-截至 2026-09-10，我已完成源码接入和远端 GPU 基础环境验证，尚未完成官方 CUDA 扩展编译、场景训练或渲染。
+截至 2026-09-10，我已完成源码接入、远端 GPU 环境验证和三个 CUDA 扩展的构建与最小运行检查，尚未进行真实场景训练或新视角渲染。
 
 - [x] 接入官方实现，固定主仓库及依赖的提交版本。
 - [x] 检查本地环境，确认需要远端 CUDA GPU。
 - [x] 验证远端 GPU、CUDA 编译器和 PyTorch，并通过 GPU 张量运算检查。
 - [x] 将源码与版本记录同步至远端数据盘。
-- [ ] 编译官方 CUDA 扩展并验证导入与运行。
+- [x] 编译官方 CUDA 扩展，并通过邻域距离、SSIM 数值/梯度、合成高斯渲染/反向传播检查。
 - [ ] 准备小型公开场景，记录数据来源和相机划分。
 - [ ] 完成训练与留出视角渲染，保存命令、日志及输出。
 
@@ -26,7 +26,7 @@
 | NVIDIA 驱动 | 580.105.08 |
 | C++ 编译器 | GCC 11.3.0 |
 
-基础张量运算通过仅表明 PyTorch 能使用 GPU；官方可微光栅化扩展仍需单独编译和验证。详细记录见 [GPU 环境检查](docs/day1-gpu-environment.md)。
+基础张量运算与扩展最小检查均通过。详细记录见 [GPU 环境检查](docs/day1-gpu-environment.md) 和 [CUDA 扩展构建与验证](docs/day1-extensions.md)。这些检查不等于完成真实场景训练或论文结果复现。
 
 ## 源码与复现范围
 
@@ -49,6 +49,7 @@ git -C third_party/gaussian-splatting submodule update --init --recursive submod
 
 - [本地环境检查与源码接入](docs/day1-environment.md)
 - [远端 GPU 环境验证](docs/day1-gpu-environment.md)
+- [CUDA 扩展构建与验证](docs/day1-extensions.md)
 - [官方实现与子模块版本](records/upstream-versions.txt)
 
 后续我会随实验更新数据来源、运行命令、参数、输出路径和失败记录，使每个阶段的结论都有对应证据。

@@ -1,0 +1,91 @@
+usage: train.py [-h] [--sh_degree SH_DEGREE] [--source_path SOURCE_PATH]
+                [--model_path MODEL_PATH] [--images IMAGES] [--depths DEPTHS]
+                [--resolution RESOLUTION] [--white_background]
+                [--train_test_exp] [--data_device DATA_DEVICE] [--eval]
+                [--iterations ITERATIONS]
+                [--position_lr_init POSITION_LR_INIT]
+                [--position_lr_final POSITION_LR_FINAL]
+                [--position_lr_delay_mult POSITION_LR_DELAY_MULT]
+                [--position_lr_max_steps POSITION_LR_MAX_STEPS]
+                [--feature_lr FEATURE_LR] [--opacity_lr OPACITY_LR]
+                [--scaling_lr SCALING_LR] [--rotation_lr ROTATION_LR]
+                [--exposure_lr_init EXPOSURE_LR_INIT]
+                [--exposure_lr_final EXPOSURE_LR_FINAL]
+                [--exposure_lr_delay_steps EXPOSURE_LR_DELAY_STEPS]
+                [--exposure_lr_delay_mult EXPOSURE_LR_DELAY_MULT]
+                [--percent_dense PERCENT_DENSE] [--lambda_dssim LAMBDA_DSSIM]
+                [--densification_interval DENSIFICATION_INTERVAL]
+                [--opacity_reset_interval OPACITY_RESET_INTERVAL]
+                [--densify_from_iter DENSIFY_FROM_ITER]
+                [--densify_until_iter DENSIFY_UNTIL_ITER]
+                [--densify_grad_threshold DENSIFY_GRAD_THRESHOLD]
+                [--depth_l1_weight_init DEPTH_L1_WEIGHT_INIT]
+                [--depth_l1_weight_final DEPTH_L1_WEIGHT_FINAL]
+                [--random_background] [--optimizer_type OPTIMIZER_TYPE]
+                [--convert_SHs_python] [--compute_cov3D_python] [--debug]
+                [--antialiasing] [--ip IP] [--port PORT]
+                [--debug_from DEBUG_FROM] [--detect_anomaly]
+                [--test_iterations TEST_ITERATIONS [TEST_ITERATIONS ...]]
+                [--save_iterations SAVE_ITERATIONS [SAVE_ITERATIONS ...]]
+                [--quiet] [--disable_viewer]
+                [--checkpoint_iterations CHECKPOINT_ITERATIONS [CHECKPOINT_ITERATIONS ...]]
+                [--start_checkpoint START_CHECKPOINT]
+
+Training script parameters
+
+options:
+  -h, --help            show this help message and exit
+  --ip IP
+  --port PORT
+  --debug_from DEBUG_FROM
+  --detect_anomaly
+  --test_iterations TEST_ITERATIONS [TEST_ITERATIONS ...]
+  --save_iterations SAVE_ITERATIONS [SAVE_ITERATIONS ...]
+  --quiet
+  --disable_viewer
+  --checkpoint_iterations CHECKPOINT_ITERATIONS [CHECKPOINT_ITERATIONS ...]
+  --start_checkpoint START_CHECKPOINT
+
+Loading Parameters:
+  --sh_degree SH_DEGREE
+  --source_path SOURCE_PATH, -s SOURCE_PATH
+  --model_path MODEL_PATH, -m MODEL_PATH
+  --images IMAGES, -i IMAGES
+  --depths DEPTHS, -d DEPTHS
+  --resolution RESOLUTION, -r RESOLUTION
+  --white_background, -w
+  --train_test_exp
+  --data_device DATA_DEVICE
+  --eval
+
+Optimization Parameters:
+  --iterations ITERATIONS
+  --position_lr_init POSITION_LR_INIT
+  --position_lr_final POSITION_LR_FINAL
+  --position_lr_delay_mult POSITION_LR_DELAY_MULT
+  --position_lr_max_steps POSITION_LR_MAX_STEPS
+  --feature_lr FEATURE_LR
+  --opacity_lr OPACITY_LR
+  --scaling_lr SCALING_LR
+  --rotation_lr ROTATION_LR
+  --exposure_lr_init EXPOSURE_LR_INIT
+  --exposure_lr_final EXPOSURE_LR_FINAL
+  --exposure_lr_delay_steps EXPOSURE_LR_DELAY_STEPS
+  --exposure_lr_delay_mult EXPOSURE_LR_DELAY_MULT
+  --percent_dense PERCENT_DENSE
+  --lambda_dssim LAMBDA_DSSIM
+  --densification_interval DENSIFICATION_INTERVAL
+  --opacity_reset_interval OPACITY_RESET_INTERVAL
+  --densify_from_iter DENSIFY_FROM_ITER
+  --densify_until_iter DENSIFY_UNTIL_ITER
+  --densify_grad_threshold DENSIFY_GRAD_THRESHOLD
+  --depth_l1_weight_init DEPTH_L1_WEIGHT_INIT
+  --depth_l1_weight_final DEPTH_L1_WEIGHT_FINAL
+  --random_background
+  --optimizer_type OPTIMIZER_TYPE
+
+Pipeline Parameters:
+  --convert_SHs_python
+  --compute_cov3D_python
+  --debug
+  --antialiasing

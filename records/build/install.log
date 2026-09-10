@@ -1,0 +1,585 @@
+Looking in indexes: http://mirrors.aliyun.com/pypi/simple
+Requirement already satisfied: numpy==1.26.4 in /root/miniconda3/lib/python3.10/site-packages (1.26.4)
+Collecting ninja==1.11.1.1
+  Downloading http://mirrors.aliyun.com/pypi/packages/6d/92/8d7aebd4430ab5ff65df2bfee6d5745f95c004284db2d8ca76dcbfd9de47/ninja-1.11.1.1-py2.py3-none-manylinux1_x86_64.manylinux_2_5_x86_64.whl (307 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 307.2/307.2 kB 920.5 kB/s eta 0:00:00
+Collecting plyfile==1.0.3
+  Downloading http://mirrors.aliyun.com/pypi/packages/8b/ab/8be662b4070c14789f7c18f5f92c8a862a05a59755b88c546651bfa1b38b/plyfile-1.0.3-py3-none-any.whl (23 kB)
+Collecting opencv-python==4.8.1.78
+  Downloading http://mirrors.aliyun.com/pypi/packages/b7/8a/b2f7e1a434d56bf1d7570fc5941ace0847404e1032d7f1f0b8fed896568d/opencv_python-4.8.1.78-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (61.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.7/61.7 MB 1.1 MB/s eta 0:00:00
+Collecting joblib==1.3.2
+  Downloading http://mirrors.aliyun.com/pypi/packages/10/40/d551139c85db202f1f384ba8bcf96aca2f329440a844f924c8a0040b6d02/joblib-1.3.2-py3-none-any.whl (302 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 302.2/302.2 kB 1.4 MB/s eta 0:00:00
+Installing collected packages: ninja, plyfile, opencv-python, joblib
+Successfully installed joblib-1.3.2 ninja-1.11.1.1 opencv-python-4.8.1.78 plyfile-1.0.3
+
+[notice] A new release of pip available: 22.2.2 -> 26.2.1
+[notice] To update, run: pip install --upgrade pip
+Using pip 22.2.2 from /root/autodl-tmp/venvs/3dgs/lib/python3.10/site-packages/pip (python 3.10)
+Looking in indexes: http://mirrors.aliyun.com/pypi/simple
+Processing ./third_party/gaussian-splatting/submodules/diff-gaussian-rasterization
+  Preparing metadata (setup.py): started
+  Running command python setup.py egg_info
+  running egg_info
+  creating /tmp/pip-pip-egg-info-_u9mndyx/diff_gaussian_rasterization.egg-info
+  writing /tmp/pip-pip-egg-info-_u9mndyx/diff_gaussian_rasterization.egg-info/PKG-INFO
+  writing dependency_links to /tmp/pip-pip-egg-info-_u9mndyx/diff_gaussian_rasterization.egg-info/dependency_links.txt
+  writing top-level names to /tmp/pip-pip-egg-info-_u9mndyx/diff_gaussian_rasterization.egg-info/top_level.txt
+  writing manifest file '/tmp/pip-pip-egg-info-_u9mndyx/diff_gaussian_rasterization.egg-info/SOURCES.txt'
+  reading manifest file '/tmp/pip-pip-egg-info-_u9mndyx/diff_gaussian_rasterization.egg-info/SOURCES.txt'
+  adding license file 'LICENSE.md'
+  writing manifest file '/tmp/pip-pip-egg-info-_u9mndyx/diff_gaussian_rasterization.egg-info/SOURCES.txt'
+  Preparing metadata (setup.py): finished with status 'done'
+Building wheels for collected packages: diff-gaussian-rasterization
+  Building wheel for diff-gaussian-rasterization (setup.py): started
+  Running command python setup.py bdist_wheel
+  running bdist_wheel
+  running build
+  running build_py
+  creating build
+  creating build/lib.linux-x86_64-cpython-310
+  creating build/lib.linux-x86_64-cpython-310/diff_gaussian_rasterization
+  copying diff_gaussian_rasterization/__init__.py -> build/lib.linux-x86_64-cpython-310/diff_gaussian_rasterization
+  running build_ext
+  /root/miniconda3/lib/python3.10/site-packages/torch/utils/cpp_extension.py:424: UserWarning: There are no g++ version bounds defined for CUDA version 11.8
+    warnings.warn(f'There are no {compiler_name} version bounds defined for CUDA version {cuda_str_version}')
+  building 'diff_gaussian_rasterization._C' extension
+  creating /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-310
+  creating /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-310/cuda_rasterizer
+  Emitting ninja build file /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-310/build.ninja...
+  Compiling objects...
+  Using envvar MAX_JOBS (4) as the number of workers...
+  [1/5] /usr/local/cuda/bin/nvcc  -I/root/miniconda3/lib/python3.10/site-packages/torch/include -I/root/miniconda3/lib/python3.10/site-packages/torch/include/torch/csrc/api/include -I/root/miniconda3/lib/python3.10/site-packages/torch/include/TH -I/root/miniconda3/lib/python3.10/site-packages/torch/include/THC -I/usr/local/cuda/include -I/root/autodl-tmp/venvs/3dgs/include -I/root/miniconda3/include/python3.10 -c -c /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/diff-gaussian-rasterization/cuda_rasterizer/backward.cu -o /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-310/cuda_rasterizer/backward.o -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr --compiler-options ''"'"'-fPIC'"'"'' -I/root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/diff-gaussian-rasterization/third_party/glm/ -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1011"' -DTORCH_EXTENSION_NAME=_C -D_GLIBCXX_USE_CXX11_ABI=0 -gencode=arch=compute_89,code=sm_89 -std=c++17
+  /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/diff-gaussian-rasterization/cuda_rasterizer/auxiliary.h(163): warning #177-D: variable "p_proj" was declared but never referenced
+
+  [2/5] /usr/local/cuda/bin/nvcc  -I/root/miniconda3/lib/python3.10/site-packages/torch/include -I/root/miniconda3/lib/python3.10/site-packages/torch/include/torch/csrc/api/include -I/root/miniconda3/lib/python3.10/site-packages/torch/include/TH -I/root/miniconda3/lib/python3.10/site-packages/torch/include/THC -I/usr/local/cuda/include -I/root/autodl-tmp/venvs/3dgs/include -I/root/miniconda3/include/python3.10 -c -c /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/diff-gaussian-rasterization/cuda_rasterizer/forward.cu -o /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-310/cuda_rasterizer/forward.o -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr --compiler-options ''"'"'-fPIC'"'"'' -I/root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/diff-gaussian-rasterization/third_party/glm/ -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1011"' -DTORCH_EXTENSION_NAME=_C -D_GLIBCXX_USE_CXX11_ABI=0 -gencode=arch=compute_89,code=sm_89 -std=c++17
+  /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/diff-gaussian-rasterization/cuda_rasterizer/auxiliary.h(163): warning #177-D: variable "p_proj" was declared but never referenced
+
+  [3/5] /usr/local/cuda/bin/nvcc  -I/root/miniconda3/lib/python3.10/site-packages/torch/include -I/root/miniconda3/lib/python3.10/site-packages/torch/include/torch/csrc/api/include -I/root/miniconda3/lib/python3.10/site-packages/torch/include/TH -I/root/miniconda3/lib/python3.10/site-packages/torch/include/THC -I/usr/local/cuda/include -I/root/autodl-tmp/venvs/3dgs/include -I/root/miniconda3/include/python3.10 -c -c /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/diff-gaussian-rasterization/cuda_rasterizer/rasterizer_impl.cu -o /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-310/cuda_rasterizer/rasterizer_impl.o -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr --compiler-options ''"'"'-fPIC'"'"'' -I/root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/diff-gaussian-rasterization/third_party/glm/ -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1011"' -DTORCH_EXTENSION_NAME=_C -D_GLIBCXX_USE_CXX11_ABI=0 -gencode=arch=compute_89,code=sm_89 -std=c++17
+  /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/diff-gaussian-rasterization/cuda_rasterizer/auxiliary.h(163): warning #177-D: variable "p_proj" was declared but never referenced
+
+  [4/5] c++ -MMD -MF /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-310/ext.o.d -pthread -B /root/miniconda3/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /root/miniconda3/include -fPIC -O2 -isystem /root/miniconda3/include -fPIC -I/root/miniconda3/lib/python3.10/site-packages/torch/include -I/root/miniconda3/lib/python3.10/site-packages/torch/include/torch/csrc/api/include -I/root/miniconda3/lib/python3.10/site-packages/torch/include/TH -I/root/miniconda3/lib/python3.10/site-packages/torch/include/THC -I/usr/local/cuda/include -I/root/autodl-tmp/venvs/3dgs/include -I/root/miniconda3/include/python3.10 -c -c /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/diff-gaussian-rasterization/ext.cpp -o /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-310/ext.o -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1011"' -DTORCH_EXTENSION_NAME=_C -D_GLIBCXX_USE_CXX11_ABI=0 -std=c++17
+  [5/5] /usr/local/cuda/bin/nvcc  -I/root/miniconda3/lib/python3.10/site-packages/torch/include -I/root/miniconda3/lib/python3.10/site-packages/torch/include/torch/csrc/api/include -I/root/miniconda3/lib/python3.10/site-packages/torch/include/TH -I/root/miniconda3/lib/python3.10/site-packages/torch/include/THC -I/usr/local/cuda/include -I/root/autodl-tmp/venvs/3dgs/include -I/root/miniconda3/include/python3.10 -c -c /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu -o /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-310/rasterize_points.o -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr --compiler-options ''"'"'-fPIC'"'"'' -I/root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/diff-gaussian-rasterization/third_party/glm/ -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1011"' -DTORCH_EXTENSION_NAME=_C -D_GLIBCXX_USE_CXX11_ABI=0 -gencode=arch=compute_89,code=sm_89 -std=c++17
+  /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu: In function ‘std::tuple<int, at::Tensor, at::Tensor, at::Tensor, at::Tensor, at::Tensor, at::Tensor> RasterizeGaussiansCUDA(const at::Tensor&, const at::Tensor&, const at::Tensor&, const at::Tensor&, const at::Tensor&, const at::Tensor&, float, const at::Tensor&, const at::Tensor&, const at::Tensor&, float, float, int, int, const at::Tensor&, int, const at::Tensor&, bool, bool, bool)’:
+  /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:74:45: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+     74 |   out_invdepthptr = out_invdepth.data<float>();
+        |                   ~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+  /root/miniconda3/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+    247 |   T * data() const {
+        | ^ ~~
+  /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:96:140: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+     96 |           rendered = CudaRasterizer::Rasterizer::forward(
+        |                                                                                                                                            ^
+  /root/miniconda3/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+    247 |   T * data() const {
+        | ^ ~~
+  /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:96:186: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+     96 |           rendered = CudaRasterizer::Rasterizer::forward(
+        |                                                                                                                                                                                          ^
+  /root/miniconda3/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+    247 |   T * data() const {
+        | ^ ~~
+  /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:96:264: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+     96 |           rendered = CudaRasterizer::Rasterizer::forward(
+        |                                                                                                                                                                                                                                                                        ^
+  /root/miniconda3/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+    247 |   T * data() const {
+        | ^ ~~
+  /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:96:304: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+     96 |           rendered = CudaRasterizer::Rasterizer::forward(
+        |                                                                                                                                                                                                                                                                                                                ^
+  /root/miniconda3/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+    247 |   T * data() const {
+        | ^ ~~
+  /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:96:455: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+     96 |           rendered = CudaRasterizer::Rasterizer::forward(
+        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ^
+  /root/miniconda3/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+    247 |   T * data() const {
+        | ^ ~~
+  /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:96:498: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+     96 |           rendered = CudaRasterizer::Rasterizer::forward(
+        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ^
+  /root/miniconda3/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+    247 |   T * data() const {
+        | ^ ~~
+  /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:96:541: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+     96 |           rendered = CudaRasterizer::Rasterizer::forward(
+        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ^
+  /root/miniconda3/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+    247 |   T * data() const {
+        | ^ ~~
+  /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:96:580: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+     96 |           rendered = CudaRasterizer::Rasterizer::forward(
+        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ^
+  /root/miniconda3/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+    247 |   T * data() const {
+        | ^ ~~
+  /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:96:655: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+     96 |           rendered = CudaRasterizer::Rasterizer::forward(
+        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ^
+  /root/miniconda3/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+    247 |   T * data() const {
+        | ^ ~~
+  /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:96:722: warning: ‘T* at::Tensor::data() const [with T = int]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+     96 |           rendered = CudaRasterizer::Rasterizer::forward(
+        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ^
+  /root/miniconda3/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+    247 |   T * data() const {
+        | ^ ~~
+  /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu: In function ‘std::tuple<at::Tensor, at::Tensor, at::Tensor, at::Tensor, at::Tensor, at::Tensor, at::Tensor, at::Tensor> RasterizeGaussiansBackwardCUDA(const at::Tensor&, const at::Tensor&, const at::Tensor&, const at::Tensor&, const at::Tensor&, const at::Tensor&, const at::Tensor&, float, const at::Tensor&, const at::Tensor&, const at::Tensor&, float, float, const at::Tensor&, const at::Tensor&, const at::Tensor&, int, const at::Tensor&, const at::Tensor&, int, const at::Tensor&, const at::Tensor&, bool, bool)’:
+  /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:180:54: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+    180 |         dL_dinvdepthsptr = dL_dinvdepths.data<float>();
+        |                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+  /root/miniconda3/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+    247 |   T * data() const {
+        | ^ ~~
+  /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:181:60: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+    181 |         dL_dout_invdepthptr = dL_dout_invdepth.data<float>();
+        |                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+  /root/miniconda3/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+    247 |   T * data() const {
+        | ^ ~~
+  /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:186:101: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+    186 |           CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+        |                                                              ~~                                     ^
+  /root/miniconda3/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+    247 |   T * data() const {
+        | ^ ~~
+  /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:186:147: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+    186 |           CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+        |                                                                                                                                                   ^
+  /root/miniconda3/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+    247 |   T * data() const {
+        | ^ ~~
+  /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:186:182: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+    186 |           CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+        |                                                                                                                                                                                      ^
+  /root/miniconda3/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+    247 |   T * data() const {
+        | ^ ~~
+  /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:186:221: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+    186 |           CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+        |                                                                                                                                                                                                                             ^
+  /root/miniconda3/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+    247 |   T * data() const {
+        | ^ ~~
+  /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:186:263: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+    186 |           CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+        |                                                                                                                                                                                                                                                                       ^
+  /root/miniconda3/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+    247 |   T * data() const {
+        | ^ ~~
+  /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:186:384: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+    186 |           CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+        |                                                                                                                                                                                                                                                                                                                                                                                                ^
+  /root/miniconda3/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+    247 |   T * data() const {
+        | ^ ~~
+  /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:186:427: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+    186 |           CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+        |                                                                                                                                                                                                                                                                                                                                                                                                                                           ^
+  /root/miniconda3/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+    247 |   T * data() const {
+        | ^ ~~
+  /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:186:470: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+    186 |           CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      ^
+  /root/miniconda3/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+    247 |   T * data() const {
+        | ^ ~~
+  /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:186:509: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+    186 |           CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ^
+  /root/miniconda3/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+    247 |   T * data() const {
+        | ^ ~~
+  /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:186:565: warning: ‘T* at::Tensor::data() const [with T = int]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+    186 |           CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     ^
+  /root/miniconda3/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+    247 |   T * data() const {
+        | ^ ~~
+  /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:186:810: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+    186 |           CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ^
+  /root/miniconda3/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+    247 |   T * data() const {
+        | ^ ~~
+  /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:186:875: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+    186 |           CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ^
+  /root/miniconda3/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+    247 |   T * data() const {
+        | ^ ~~
+  /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:186:917: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+    186 |           CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     ^
+  /root/miniconda3/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+    247 |   T * data() const {
+        | ^ ~~
+  /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:186:961: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+    186 |           CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 ^
+  /root/miniconda3/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+    247 |   T * data() const {
+        | ^ ~~
+  /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:186:1004: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+    186 |           CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ^
+  /root/miniconda3/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+    247 |   T * data() const {
+        | ^ ~~
+  /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:186:1066: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+    186 |           CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ^
+  /root/miniconda3/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+    247 |   T * data() const {
+        | ^ ~~
+  /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:186:1108: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+    186 |           CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ^
+  /root/miniconda3/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+    247 |   T * data() const {
+        | ^ ~~
+  /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:186:1147: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+    186 |           CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ^
+  /root/miniconda3/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+    247 |   T * data() const {
+        | ^ ~~
+  /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:186:1190: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+    186 |           CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      ^
+  /root/miniconda3/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+    247 |   T * data() const {
+        | ^ ~~
+  /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:186:1236: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+    186 |           CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ^
+  /root/miniconda3/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+    247 |   T * data() const {
+        | ^ ~~
+  /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu: In function ‘at::Tensor markVisible(at::Tensor&, at::Tensor&, at::Tensor&)’:
+  /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:236:87: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+    236 |         CudaRasterizer::Rasterizer::markVisible(P,
+        |                                                                                       ^
+  /root/miniconda3/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+    247 |   T * data() const {
+        | ^ ~~
+  /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:236:130: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+    236 |         CudaRasterizer::Rasterizer::markVisible(P,
+        |                                                                                                                                  ^
+  /root/miniconda3/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+    247 |   T * data() const {
+        | ^ ~~
+  /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:236:173: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+    236 |         CudaRasterizer::Rasterizer::markVisible(P,
+        |                                                                                                                                                                             ^
+  /root/miniconda3/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+    247 |   T * data() const {
+        | ^ ~~
+  /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:236:212: warning: ‘T* at::Tensor::data() const [with T = bool]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+    236 |         CudaRasterizer::Rasterizer::markVisible(P,
+        |                                                                                                                                                                                                                    ^
+  /root/miniconda3/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+    247 |   T * data() const {
+        | ^ ~~
+  g++ -pthread -B /root/miniconda3/compiler_compat -shared -Wl,-rpath,/root/miniconda3/lib -Wl,-rpath-link,/root/miniconda3/lib -L/root/miniconda3/lib -Wl,-rpath,/root/miniconda3/lib -Wl,-rpath-link,/root/miniconda3/lib -L/root/miniconda3/lib /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-310/cuda_rasterizer/backward.o /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-310/cuda_rasterizer/forward.o /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-310/cuda_rasterizer/rasterizer_impl.o /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-310/ext.o /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-310/rasterize_points.o -L/root/miniconda3/lib/python3.10/site-packages/torch/lib -L/usr/local/cuda/lib64 -lc10 -ltorch -ltorch_cpu -ltorch_python -lcudart -lc10_cuda -ltorch_cuda -o build/lib.linux-x86_64-cpython-310/diff_gaussian_rasterization/_C.cpython-310-x86_64-linux-gnu.so
+  /root/autodl-tmp/venvs/3dgs/lib/python3.10/site-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+    warnings.warn(
+  installing to build/bdist.linux-x86_64/wheel
+  running install
+  running install_lib
+  creating build/bdist.linux-x86_64
+  creating build/bdist.linux-x86_64/wheel
+  creating build/bdist.linux-x86_64/wheel/diff_gaussian_rasterization
+  copying build/lib.linux-x86_64-cpython-310/diff_gaussian_rasterization/__init__.py -> build/bdist.linux-x86_64/wheel/diff_gaussian_rasterization
+  copying build/lib.linux-x86_64-cpython-310/diff_gaussian_rasterization/_C.cpython-310-x86_64-linux-gnu.so -> build/bdist.linux-x86_64/wheel/diff_gaussian_rasterization
+  running install_egg_info
+  running egg_info
+  creating diff_gaussian_rasterization.egg-info
+  writing diff_gaussian_rasterization.egg-info/PKG-INFO
+  writing dependency_links to diff_gaussian_rasterization.egg-info/dependency_links.txt
+  writing top-level names to diff_gaussian_rasterization.egg-info/top_level.txt
+  writing manifest file 'diff_gaussian_rasterization.egg-info/SOURCES.txt'
+  reading manifest file 'diff_gaussian_rasterization.egg-info/SOURCES.txt'
+  adding license file 'LICENSE.md'
+  writing manifest file 'diff_gaussian_rasterization.egg-info/SOURCES.txt'
+  Copying diff_gaussian_rasterization.egg-info to build/bdist.linux-x86_64/wheel/diff_gaussian_rasterization-0.0.0-py3.10.egg-info
+  running install_scripts
+  adding license file "LICENSE.md" (matched pattern "LICEN[CS]E*")
+  creating build/bdist.linux-x86_64/wheel/diff_gaussian_rasterization-0.0.0.dist-info/WHEEL
+  creating '/tmp/pip-wheel-0o_pcdfh/diff_gaussian_rasterization-0.0.0-cp310-cp310-linux_x86_64.whl' and adding 'build/bdist.linux-x86_64/wheel' to it
+  adding 'diff_gaussian_rasterization/_C.cpython-310-x86_64-linux-gnu.so'
+  adding 'diff_gaussian_rasterization/__init__.py'
+  adding 'diff_gaussian_rasterization-0.0.0.dist-info/LICENSE.md'
+  adding 'diff_gaussian_rasterization-0.0.0.dist-info/METADATA'
+  adding 'diff_gaussian_rasterization-0.0.0.dist-info/WHEEL'
+  adding 'diff_gaussian_rasterization-0.0.0.dist-info/top_level.txt'
+  adding 'diff_gaussian_rasterization-0.0.0.dist-info/RECORD'
+  removing build/bdist.linux-x86_64/wheel
+  Building wheel for diff-gaussian-rasterization (setup.py): finished with status 'done'
+  Created wheel for diff-gaussian-rasterization: filename=diff_gaussian_rasterization-0.0.0-cp310-cp310-linux_x86_64.whl size=355284 sha256=fc56feaa08c179d01b52e7a88c1507f1c012d85b3e79889a312fbc2a6003ac00
+  Stored in directory: /root/autodl-tmp/pip-cache/wheels/cb/0a/26/65ffc9d9426a045a0b26373eca96f969d9d9bc33cbf6ef28fb
+Successfully built diff-gaussian-rasterization
+Installing collected packages: diff-gaussian-rasterization
+Successfully installed diff-gaussian-rasterization-0.0.0
+
+[notice] A new release of pip available: 22.2.2 -> 26.2.1
+[notice] To update, run: pip install --upgrade pip
+Using pip 22.2.2 from /root/autodl-tmp/venvs/3dgs/lib/python3.10/site-packages/pip (python 3.10)
+Looking in indexes: http://mirrors.aliyun.com/pypi/simple
+Processing ./third_party/gaussian-splatting/submodules/simple-knn
+  Preparing metadata (setup.py): started
+  Running command python setup.py egg_info
+  running egg_info
+  creating /tmp/pip-pip-egg-info-cjywwt76/simple_knn.egg-info
+  writing /tmp/pip-pip-egg-info-cjywwt76/simple_knn.egg-info/PKG-INFO
+  writing dependency_links to /tmp/pip-pip-egg-info-cjywwt76/simple_knn.egg-info/dependency_links.txt
+  writing top-level names to /tmp/pip-pip-egg-info-cjywwt76/simple_knn.egg-info/top_level.txt
+  writing manifest file '/tmp/pip-pip-egg-info-cjywwt76/simple_knn.egg-info/SOURCES.txt'
+  reading manifest file '/tmp/pip-pip-egg-info-cjywwt76/simple_knn.egg-info/SOURCES.txt'
+  adding license file 'LICENSE.md'
+  writing manifest file '/tmp/pip-pip-egg-info-cjywwt76/simple_knn.egg-info/SOURCES.txt'
+  Preparing metadata (setup.py): finished with status 'done'
+Building wheels for collected packages: simple-knn
+  Building wheel for simple-knn (setup.py): started
+  Running command python setup.py bdist_wheel
+  running bdist_wheel
+  running build
+  running build_ext
+  /root/miniconda3/lib/python3.10/site-packages/torch/utils/cpp_extension.py:424: UserWarning: There are no g++ version bounds defined for CUDA version 11.8
+    warnings.warn(f'There are no {compiler_name} version bounds defined for CUDA version {cuda_str_version}')
+  building 'simple_knn._C' extension
+  creating /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/simple-knn/build
+  creating /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/simple-knn/build/temp.linux-x86_64-cpython-310
+  Emitting ninja build file /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/simple-knn/build/temp.linux-x86_64-cpython-310/build.ninja...
+  Compiling objects...
+  Using envvar MAX_JOBS (4) as the number of workers...
+  [1/3] /usr/local/cuda/bin/nvcc  -I/root/miniconda3/lib/python3.10/site-packages/torch/include -I/root/miniconda3/lib/python3.10/site-packages/torch/include/torch/csrc/api/include -I/root/miniconda3/lib/python3.10/site-packages/torch/include/TH -I/root/miniconda3/lib/python3.10/site-packages/torch/include/THC -I/usr/local/cuda/include -I/root/autodl-tmp/venvs/3dgs/include -I/root/miniconda3/include/python3.10 -c -c /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/simple-knn/simple_knn.cu -o /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/simple-knn/build/temp.linux-x86_64-cpython-310/simple_knn.o -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr --compiler-options ''"'"'-fPIC'"'"'' -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1011"' -DTORCH_EXTENSION_NAME=_C -D_GLIBCXX_USE_CXX11_ABI=0 -gencode=arch=compute_89,code=sm_89 -std=c++17
+  /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/simple-knn/simple_knn.cu:24: warning: "__CUDACC__" redefined
+     24 | #define __CUDACC__
+        |
+  <command-line>: note: this is the location of the previous definition
+  /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/simple-knn/simple_knn.cu:24: warning: "__CUDACC__" redefined
+     24 | #define __CUDACC__
+        |
+  <command-line>: note: this is the location of the previous definition
+  [2/3] c++ -MMD -MF /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/simple-knn/build/temp.linux-x86_64-cpython-310/ext.o.d -pthread -B /root/miniconda3/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /root/miniconda3/include -fPIC -O2 -isystem /root/miniconda3/include -fPIC -I/root/miniconda3/lib/python3.10/site-packages/torch/include -I/root/miniconda3/lib/python3.10/site-packages/torch/include/torch/csrc/api/include -I/root/miniconda3/lib/python3.10/site-packages/torch/include/TH -I/root/miniconda3/lib/python3.10/site-packages/torch/include/THC -I/usr/local/cuda/include -I/root/autodl-tmp/venvs/3dgs/include -I/root/miniconda3/include/python3.10 -c -c /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/simple-knn/ext.cpp -o /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/simple-knn/build/temp.linux-x86_64-cpython-310/ext.o -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1011"' -DTORCH_EXTENSION_NAME=_C -D_GLIBCXX_USE_CXX11_ABI=0 -std=c++17
+  [3/3] /usr/local/cuda/bin/nvcc  -I/root/miniconda3/lib/python3.10/site-packages/torch/include -I/root/miniconda3/lib/python3.10/site-packages/torch/include/torch/csrc/api/include -I/root/miniconda3/lib/python3.10/site-packages/torch/include/TH -I/root/miniconda3/lib/python3.10/site-packages/torch/include/THC -I/usr/local/cuda/include -I/root/autodl-tmp/venvs/3dgs/include -I/root/miniconda3/include/python3.10 -c -c /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/simple-knn/spatial.cu -o /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/simple-knn/build/temp.linux-x86_64-cpython-310/spatial.o -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr --compiler-options ''"'"'-fPIC'"'"'' -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1011"' -DTORCH_EXTENSION_NAME=_C -D_GLIBCXX_USE_CXX11_ABI=0 -gencode=arch=compute_89,code=sm_89 -std=c++17
+  /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/simple-knn/spatial.cu: In function ‘at::Tensor distCUDA2(const at::Tensor&)’:
+  /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/simple-knn/spatial.cu:23:64: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+     23 |   SimpleKNN::knn(P, (float3*)points.contiguous().data<float>(), means.contiguous().data<float>());
+        |                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+  /root/miniconda3/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+    247 |   T * data() const {
+        | ^ ~~
+  /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/simple-knn/spatial.cu:23:102: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+     23 |   SimpleKNN::knn(P, (float3*)points.contiguous().data<float>(), means.contiguous().data<float>());
+        |                                                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~   ^
+  /root/miniconda3/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+    247 |   T * data() const {
+        | ^ ~~
+  creating build/lib.linux-x86_64-cpython-310
+  creating build/lib.linux-x86_64-cpython-310/simple_knn
+  g++ -pthread -B /root/miniconda3/compiler_compat -shared -Wl,-rpath,/root/miniconda3/lib -Wl,-rpath-link,/root/miniconda3/lib -L/root/miniconda3/lib -Wl,-rpath,/root/miniconda3/lib -Wl,-rpath-link,/root/miniconda3/lib -L/root/miniconda3/lib /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/simple-knn/build/temp.linux-x86_64-cpython-310/ext.o /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/simple-knn/build/temp.linux-x86_64-cpython-310/simple_knn.o /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/simple-knn/build/temp.linux-x86_64-cpython-310/spatial.o -L/root/miniconda3/lib/python3.10/site-packages/torch/lib -L/usr/local/cuda/lib64 -lc10 -ltorch -ltorch_cpu -ltorch_python -lcudart -lc10_cuda -ltorch_cuda -o build/lib.linux-x86_64-cpython-310/simple_knn/_C.cpython-310-x86_64-linux-gnu.so
+  /root/autodl-tmp/venvs/3dgs/lib/python3.10/site-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+    warnings.warn(
+  installing to build/bdist.linux-x86_64/wheel
+  running install
+  running install_lib
+  creating build/bdist.linux-x86_64
+  creating build/bdist.linux-x86_64/wheel
+  creating build/bdist.linux-x86_64/wheel/simple_knn
+  copying build/lib.linux-x86_64-cpython-310/simple_knn/_C.cpython-310-x86_64-linux-gnu.so -> build/bdist.linux-x86_64/wheel/simple_knn
+  running install_egg_info
+  running egg_info
+  creating simple_knn.egg-info
+  writing simple_knn.egg-info/PKG-INFO
+  writing dependency_links to simple_knn.egg-info/dependency_links.txt
+  writing top-level names to simple_knn.egg-info/top_level.txt
+  writing manifest file 'simple_knn.egg-info/SOURCES.txt'
+  reading manifest file 'simple_knn.egg-info/SOURCES.txt'
+  adding license file 'LICENSE.md'
+  writing manifest file 'simple_knn.egg-info/SOURCES.txt'
+  Copying simple_knn.egg-info to build/bdist.linux-x86_64/wheel/simple_knn-0.0.0-py3.10.egg-info
+  running install_scripts
+  adding license file "LICENSE.md" (matched pattern "LICEN[CS]E*")
+  creating build/bdist.linux-x86_64/wheel/simple_knn-0.0.0.dist-info/WHEEL
+  creating '/tmp/pip-wheel-bf4zhm4p/simple_knn-0.0.0-cp310-cp310-linux_x86_64.whl' and adding 'build/bdist.linux-x86_64/wheel' to it
+  adding 'simple_knn/_C.cpython-310-x86_64-linux-gnu.so'
+  adding 'simple_knn-0.0.0.dist-info/LICENSE.md'
+  adding 'simple_knn-0.0.0.dist-info/METADATA'
+  adding 'simple_knn-0.0.0.dist-info/WHEEL'
+  adding 'simple_knn-0.0.0.dist-info/top_level.txt'
+  adding 'simple_knn-0.0.0.dist-info/RECORD'
+  removing build/bdist.linux-x86_64/wheel
+  Building wheel for simple-knn (setup.py): finished with status 'done'
+  Created wheel for simple-knn: filename=simple_knn-0.0.0-cp310-cp310-linux_x86_64.whl size=396998 sha256=7dae985e232a2e191f780ad442a47b9695c1d133d98efd4cf478f951d6a3ae95
+  Stored in directory: /root/autodl-tmp/pip-cache/wheels/e1/cc/eb/14123a4997884e310d61e273132fb67e32617792cc80c71e3b
+Successfully built simple-knn
+Installing collected packages: simple-knn
+Successfully installed simple-knn-0.0.0
+
+[notice] A new release of pip available: 22.2.2 -> 26.2.1
+[notice] To update, run: pip install --upgrade pip
+Using pip 22.2.2 from /root/autodl-tmp/venvs/3dgs/lib/python3.10/site-packages/pip (python 3.10)
+Looking in indexes: http://mirrors.aliyun.com/pypi/simple
+Processing ./third_party/gaussian-splatting/submodules/fused-ssim
+  Preparing metadata (setup.py): started
+  Running command python setup.py egg_info
+  running egg_info
+  creating /tmp/pip-pip-egg-info-94n2u3dy/fused_ssim.egg-info
+  writing /tmp/pip-pip-egg-info-94n2u3dy/fused_ssim.egg-info/PKG-INFO
+  writing dependency_links to /tmp/pip-pip-egg-info-94n2u3dy/fused_ssim.egg-info/dependency_links.txt
+  writing top-level names to /tmp/pip-pip-egg-info-94n2u3dy/fused_ssim.egg-info/top_level.txt
+  writing manifest file '/tmp/pip-pip-egg-info-94n2u3dy/fused_ssim.egg-info/SOURCES.txt'
+  reading manifest file '/tmp/pip-pip-egg-info-94n2u3dy/fused_ssim.egg-info/SOURCES.txt'
+  adding license file 'LICENSE'
+  writing manifest file '/tmp/pip-pip-egg-info-94n2u3dy/fused_ssim.egg-info/SOURCES.txt'
+  Preparing metadata (setup.py): finished with status 'done'
+Building wheels for collected packages: fused-ssim
+  Building wheel for fused-ssim (setup.py): started
+  Running command python setup.py bdist_wheel
+  running bdist_wheel
+  running build
+  running build_py
+  creating build
+  creating build/lib.linux-x86_64-cpython-310
+  creating build/lib.linux-x86_64-cpython-310/fused_ssim
+  copying fused_ssim/__init__.py -> build/lib.linux-x86_64-cpython-310/fused_ssim
+  running build_ext
+  /root/miniconda3/lib/python3.10/site-packages/torch/utils/cpp_extension.py:424: UserWarning: There are no g++ version bounds defined for CUDA version 11.8
+    warnings.warn(f'There are no {compiler_name} version bounds defined for CUDA version {cuda_str_version}')
+  building 'fused_ssim_cuda' extension
+  creating /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/fused-ssim/build/temp.linux-x86_64-cpython-310
+  Emitting ninja build file /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/fused-ssim/build/temp.linux-x86_64-cpython-310/build.ninja...
+  Compiling objects...
+  Using envvar MAX_JOBS (4) as the number of workers...
+  [1/2] c++ -MMD -MF /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/fused-ssim/build/temp.linux-x86_64-cpython-310/ext.o.d -pthread -B /root/miniconda3/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /root/miniconda3/include -fPIC -O2 -isystem /root/miniconda3/include -fPIC -I/root/miniconda3/lib/python3.10/site-packages/torch/include -I/root/miniconda3/lib/python3.10/site-packages/torch/include/torch/csrc/api/include -I/root/miniconda3/lib/python3.10/site-packages/torch/include/TH -I/root/miniconda3/lib/python3.10/site-packages/torch/include/THC -I/usr/local/cuda/include -I/root/autodl-tmp/venvs/3dgs/include -I/root/miniconda3/include/python3.10 -c -c /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/fused-ssim/ext.cpp -o /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/fused-ssim/build/temp.linux-x86_64-cpython-310/ext.o -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1011"' -DTORCH_EXTENSION_NAME=fused_ssim_cuda -D_GLIBCXX_USE_CXX11_ABI=0 -std=c++17
+  [2/2] /usr/local/cuda/bin/nvcc  -I/root/miniconda3/lib/python3.10/site-packages/torch/include -I/root/miniconda3/lib/python3.10/site-packages/torch/include/torch/csrc/api/include -I/root/miniconda3/lib/python3.10/site-packages/torch/include/TH -I/root/miniconda3/lib/python3.10/site-packages/torch/include/THC -I/usr/local/cuda/include -I/root/autodl-tmp/venvs/3dgs/include -I/root/miniconda3/include/python3.10 -c -c /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/fused-ssim/ssim.cu -o /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/fused-ssim/build/temp.linux-x86_64-cpython-310/ssim.o -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr --compiler-options ''"'"'-fPIC'"'"'' -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1011"' -DTORCH_EXTENSION_NAME=fused_ssim_cuda -D_GLIBCXX_USE_CXX11_ABI=0 -gencode=arch=compute_89,code=sm_89 -std=c++17
+  /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/fused-ssim/ssim.cu: In function ‘std::tuple<at::Tensor, at::Tensor, at::Tensor, at::Tensor> fusedssim(float, float, at::Tensor&, at::Tensor&, bool)’:
+  /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/fused-ssim/ssim.cu:389:121: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+    389 |   fusedssimCUDA<<<grid,block>>>(
+        |                                                                                                                         ^
+  /root/miniconda3/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+    247 |   T * data() const {
+        | ^ ~~
+  /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/fused-ssim/ssim.cu:389:158: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+    389 |   fusedssimCUDA<<<grid,block>>>(
+        |                                                                                                                                                              ^
+  /root/miniconda3/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+    247 |   T * data() const {
+        | ^ ~~
+  /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/fused-ssim/ssim.cu:389:197: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+    389 |   fusedssimCUDA<<<grid,block>>>(
+        |                                                                                                                                                                                                     ^
+  /root/miniconda3/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+    247 |   T * data() const {
+        | ^ ~~
+  /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/fused-ssim/ssim.cu:389:237: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+    389 |   fusedssimCUDA<<<grid,block>>>(
+        |                                                                                                                                                                                                                                             ^
+  /root/miniconda3/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+    247 |   T * data() const {
+        | ^ ~~
+  /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/fused-ssim/ssim.cu:389:283: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+    389 |   fusedssimCUDA<<<grid,block>>>(
+        |                                                                                                                                                                                                                                                                                           ^
+  /root/miniconda3/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+    247 |   T * data() const {
+        | ^ ~~
+  /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/fused-ssim/ssim.cu:389:327: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+    389 |   fusedssimCUDA<<<grid,block>>>(
+        |                                                                                                                                                                                                                                                                                                                                       ^
+  /root/miniconda3/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+    247 |   T * data() const {
+        | ^ ~~
+  /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/fused-ssim/ssim.cu: In function ‘at::Tensor fusedssim_backward(float, float, at::Tensor&, at::Tensor&, at::Tensor&, at::Tensor&, at::Tensor&, at::Tensor&)’:
+  /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/fused-ssim/ssim.cu:428:130: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+    428 |   fusedssim_backwardCUDA<<<grid,block>>>(
+        |                                                                                                                                  ^
+  /root/miniconda3/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+    247 |   T * data() const {
+        | ^ ~~
+  /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/fused-ssim/ssim.cu:428:167: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+    428 |   fusedssim_backwardCUDA<<<grid,block>>>(
+        |                                                                                                                                                                       ^
+  /root/miniconda3/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+    247 |   T * data() const {
+        | ^ ~~
+  /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/fused-ssim/ssim.cu:428:207: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+    428 |   fusedssim_backwardCUDA<<<grid,block>>>(
+        |                                                                                                                                                                                                               ^
+  /root/miniconda3/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+    247 |   T * data() const {
+        | ^ ~~
+  /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/fused-ssim/ssim.cu:428:248: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+    428 |   fusedssim_backwardCUDA<<<grid,block>>>(
+        |                                                                                                                                                                                                                                                        ^
+  /root/miniconda3/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+    247 |   T * data() const {
+        | ^ ~~
+  /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/fused-ssim/ssim.cu:428:288: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+    428 |   fusedssim_backwardCUDA<<<grid,block>>>(
+        |                                                                                                                                                                                                                                                                                                ^
+  /root/miniconda3/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+    247 |   T * data() const {
+        | ^ ~~
+  /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/fused-ssim/ssim.cu:428:334: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+    428 |   fusedssim_backwardCUDA<<<grid,block>>>(
+        |                                                                                                                                                                                                                                                                                                                                              ^
+  /root/miniconda3/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+    247 |   T * data() const {
+        | ^ ~~
+  /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/fused-ssim/ssim.cu:428:378: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+    428 |   fusedssim_backwardCUDA<<<grid,block>>>(
+        |                                                                                                                                                                                                                                                                                                                                                                                          ^
+  /root/miniconda3/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+    247 |   T * data() const {
+        | ^ ~~
+  g++ -pthread -B /root/miniconda3/compiler_compat -shared -Wl,-rpath,/root/miniconda3/lib -Wl,-rpath-link,/root/miniconda3/lib -L/root/miniconda3/lib -Wl,-rpath,/root/miniconda3/lib -Wl,-rpath-link,/root/miniconda3/lib -L/root/miniconda3/lib /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/fused-ssim/build/temp.linux-x86_64-cpython-310/ext.o /root/autodl-tmp/3dgs-reproduction/third_party/gaussian-splatting/submodules/fused-ssim/build/temp.linux-x86_64-cpython-310/ssim.o -L/root/miniconda3/lib/python3.10/site-packages/torch/lib -L/usr/local/cuda/lib64 -lc10 -ltorch -ltorch_cpu -ltorch_python -lcudart -lc10_cuda -ltorch_cuda -o build/lib.linux-x86_64-cpython-310/fused_ssim_cuda.cpython-310-x86_64-linux-gnu.so
+  /root/autodl-tmp/venvs/3dgs/lib/python3.10/site-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+    warnings.warn(
+  installing to build/bdist.linux-x86_64/wheel
+  running install
+  running install_lib
+  creating build/bdist.linux-x86_64
+  creating build/bdist.linux-x86_64/wheel
+  creating build/bdist.linux-x86_64/wheel/fused_ssim
+  copying build/lib.linux-x86_64-cpython-310/fused_ssim/__init__.py -> build/bdist.linux-x86_64/wheel/fused_ssim
+  copying build/lib.linux-x86_64-cpython-310/fused_ssim_cuda.cpython-310-x86_64-linux-gnu.so -> build/bdist.linux-x86_64/wheel
+  running install_egg_info
+  running egg_info
+  creating fused_ssim.egg-info
+  writing fused_ssim.egg-info/PKG-INFO
+  writing dependency_links to fused_ssim.egg-info/dependency_links.txt
+  writing top-level names to fused_ssim.egg-info/top_level.txt
+  writing manifest file 'fused_ssim.egg-info/SOURCES.txt'
+  reading manifest file 'fused_ssim.egg-info/SOURCES.txt'
+  adding license file 'LICENSE'
+  writing manifest file 'fused_ssim.egg-info/SOURCES.txt'
+  Copying fused_ssim.egg-info to build/bdist.linux-x86_64/wheel/fused_ssim-0.0.0-py3.10.egg-info
+  running install_scripts
+  adding license file "LICENSE" (matched pattern "LICEN[CS]E*")
+  creating build/bdist.linux-x86_64/wheel/fused_ssim-0.0.0.dist-info/WHEEL
+  creating '/tmp/pip-wheel-hr3rqxof/fused_ssim-0.0.0-cp310-cp310-linux_x86_64.whl' and adding 'build/bdist.linux-x86_64/wheel' to it
+  adding 'fused_ssim_cuda.cpython-310-x86_64-linux-gnu.so'
+  adding 'fused_ssim/__init__.py'
+  adding 'fused_ssim-0.0.0.dist-info/LICENSE'
+  adding 'fused_ssim-0.0.0.dist-info/METADATA'
+  adding 'fused_ssim-0.0.0.dist-info/WHEEL'
+  adding 'fused_ssim-0.0.0.dist-info/top_level.txt'
+  adding 'fused_ssim-0.0.0.dist-info/RECORD'
+  removing build/bdist.linux-x86_64/wheel
+  Building wheel for fused-ssim (setup.py): finished with status 'done'
+  Created wheel for fused-ssim: filename=fused_ssim-0.0.0-cp310-cp310-linux_x86_64.whl size=219475 sha256=96afc4af034fde8eccd3815a7785d5deecb7e0c9dcb3d5a78dc3b4ad41c4b41a
+  Stored in directory: /root/autodl-tmp/pip-cache/wheels/b7/e8/95/c781c28e4d73799cc1ac7b72a5b8be1776d881968c7e5d00c9
+Successfully built fused-ssim
+Installing collected packages: fused-ssim
+Successfully installed fused-ssim-0.0.0
+
+[notice] A new release of pip available: 22.2.2 -> 26.2.1
+[notice] To update, run: pip install --upgrade pip

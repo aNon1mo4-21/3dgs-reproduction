@@ -1,0 +1,11 @@
+{
+  "torch": "2.1.2+cu118",
+  "gpu": "NVIDIA GeForce RTX 4090 D",
+  "knn_max_abs_error": 3.403984010219574e-07,
+  "ssim_abs_error": 0.0,
+  "ssim_gradient_max_abs_error": 2.7939677238464355e-09,
+  "raster_radius": 5,
+  "raster_max": 0.34646663069725037,
+  "opacity_gradient": 0.0012277357745915651,
+  "status": "PASS"
+}
